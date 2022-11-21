@@ -8,47 +8,31 @@ export default function Viamo() {
   let transcripcionmodif = pruebatranscripcion.split(expresiones);
   let i = 0;
   return (
-    <div className="divcontainer bg-[#9E00FF]">
-      <h1 className="text-center">Nuestro Cliente es: {datos[0].cliente}</h1>
-      <h2>Test: Test sobre la funcionalidad de la pagina web de Viamo</h2>
+    <div className="divcontainer bg-[#2874A6]">
+      <h1 className="text-center text-[#FDFEFE] pt-[20px] text-[30px] ">
+        Nuestro Cliente es: {datos[0].cliente}
+      </h1>
+      <h2 className="text-[#FDFEFE] ml-[40px] pt-[30px] text-[25px]">
+        Test: Test sobre la funcionalidad de la pagina web de Viamo
+      </h2>
       <div className="pt-[70px] pb-10">
         <Video datos={datos} i={i} />
       </div>
-      <br />
-      <br></br>
-      <h2 className="Transcripcion ">Transcripcion</h2>
-      <div className="text transcripcion overflow-scroll	w-[500px] h-[500px] p-[30px]">
+      <h2 className="Transcripcion pt-[35px] pb-[35px] text-[#FDFEFE] ml-[40px] text-[25px]">
+        Transcripcion
+      </h2>
+      <div className="text transcripcion overflow-scroll	w-[600px] h-[300px] text-base pl-[45px] pr-[35px] ml-[40px] ">
         <Transcripcion transcripcionmodif={transcripcionmodif} />
       </div>
-      <h2>Tareas</h2>
-      <p>{datos[0].escenario}</p>
-      <div>
+      <h2 className="pt-[40px] pb-[25px] text-[#FDFEFE] ml-[40px] text-[25px]">
+        Tareas
+      </h2>
+      <p className=" border-b-2 w-[600px] text-[#FDFEFE] ml-[40px] pb-[15px]">
+        Escenario: {datos[0].escenario}
+      </p>
+      <div className="ml-[50px]">
         <Tareas datos={datos} i={i} />
       </div>
     </div>
   );
 }
-/*
-Este funciona perfecto
-
-{datos[0].preguntas.map((pregunta) => (
-        <div>{pregunta.texto}</div>
-      ))}
-
-
-
---------------------------------
-  {datos.map((dato, i) => (
-        <div>
-          {dato.cliente}
-          {dato.id}
-          {dato.idVideo}
-          {dato.transcripcion}
-        </div>
-        -------------------------
-
-{datos.map((dato) =>
-        dato.preguntas.map((pregunta) => <div>{pregunta.texto}</div>)
-      )}
-
-      ))}*/
