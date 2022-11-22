@@ -1,6 +1,6 @@
 export default function Transcripcion({ transcripcionmodif }) {
   return (
-    <div className="transcripcioncontainer 	">
+    <div className="transcripcioncontainer ">
       <div className="text-[#FDFEFE]">
         {transcripcionmodif.map((element) => (
           <div>
