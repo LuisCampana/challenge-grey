@@ -1,11 +1,9 @@
 import "./index.css";
-import datos from "./Datos.json";
 import { Route, Routes } from "react-router-dom";
 import Nebula from "./Pages/Nebula";
 import Viamo from "./Pages/Viamo";
 import Home from "./Pages/Home";
 function App() {
-  console.log(datos);
   return (
     <div className="App ">
       <Routes>
